@@ -3,7 +3,7 @@ import { News } from "./News";
 import { Todo } from "./todos/Todo";
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDragon } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 
 export const Navbar = () => {
     const [inputText, setInputText] = useState('');
@@ -30,7 +30,7 @@ export const Navbar = () => {
 
                     <Link to="/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
 
-                        <span className="ml-3 text-xl"><FontAwesomeIcon style={{color: "#ff5555"}} icon={faDragon} /> Daily</span>
+                        <span className="ml-3 text-xl"><FontAwesomeIcon style={{color: "#ff5555"}} icon={faSun} /> Daily</span>
 
                     </Link>
 
