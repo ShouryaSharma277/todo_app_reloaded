@@ -1,0 +1,8 @@
+.dynamicCss {
+    background-color: #edf0ee;
+}
+
+.dynamicCssCompleted {
+    background-color: #c8cac9;
+    text-decoration: line-through;
+}
