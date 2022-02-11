@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { News } from "./News";
 import { Todo } from "./todos/Todo";
+import { Music } from "./Music";
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from '@fortawesome/free-solid-svg-icons';
@@ -38,6 +39,7 @@ export const Navbar = () => {
 
                         <Link to="/home" className="mr-10 hover:text-white cursor-pointer">Home</Link>
                         <Link to="/news" className="mr-10 hover:text-white cursor-pointer">News</Link>
+	    		<Link to="/music" className="mr-10 hover:text-white cursor-pointer">Music</Link>
                         <Link to="/about" className="mr-10 hover:text-white cursor-pointer">About</Link>
 
                     </nav>
@@ -51,6 +53,7 @@ export const Navbar = () => {
             <Routes>
                 <Route path="/home" element={<Todo todos={todos} setTodos={setTodos} setInputText={setInputText} inputText={inputText} />} />
                 <Route path="/news" element={<News />} />
+	    	<Route path="/music" element={<Music />} />
 
             </Routes>
 
