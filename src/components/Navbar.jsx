@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { News } from "./News";
 import { Todo } from "./todos/Todo";
-import { Music } from "./Music";
+import { Music } from "./music/Music";
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { Toggle } from "./ThemeToggle";
 
 export const Navbar = () => {
     const [inputText, setInputText] = useState('');
     const [todos, setTodos] = useState([]);
 
+    // Fetching todos from localStorage
     useEffect(() => {
         const data = localStorage.getItem('todos');
         if (data) {
@@ -31,7 +30,7 @@ export const Navbar = () => {
 
                     <Link to="/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
 
-                        <span className="ml-3 text-xl"><FontAwesomeIcon style={{color: "#ff5555"}} icon={faSun} /> Daily</span>
+                        <span className="ml-3 text-xl">Daily</span>
 
                     </Link>
 
@@ -39,8 +38,9 @@ export const Navbar = () => {
 
                         <Link to="/home" className="mr-10 hover:text-white cursor-pointer">Home</Link>
                         <Link to="/news" className="mr-10 hover:text-white cursor-pointer">News</Link>
-	    		<Link to="/music" className="mr-10 hover:text-white cursor-pointer">Music</Link>
+                        <Link to="/music" className="mr-10 hover:text-white cursor-pointer">Music</Link>
                         <Link to="/about" className="mr-10 hover:text-white cursor-pointer">About</Link>
+                        <Toggle />
 
                     </nav>
 
@@ -52,8 +52,8 @@ export const Navbar = () => {
             {/* Managing Routes */}
             <Routes>
                 <Route path="/home" element={<Todo todos={todos} setTodos={setTodos} setInputText={setInputText} inputText={inputText} />} />
-                <Route path="/news" element={<News />} />
-	    	<Route path="/music" element={<Music />} />
+                <Route path="/news" element={<h1>News component is supposed to be here</h1>} />
+                <Route path="/music" element={<Music />} />
 
             </Routes>
 

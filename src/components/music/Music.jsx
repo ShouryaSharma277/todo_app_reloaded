@@ -3,7 +3,7 @@ import "./music.css";
 
 export const Music = () => {
 	return (
-	<div className="flex justify-center bg-slate-400">
+	<div style={{height: "65.6rem"}} className="flex justify-center bg-slate-400">
 		<div className="flex justify-center">
 			<Iframe
 		          className="songs"
@@ -25,4 +25,3 @@ export const Music = () => {
 	);
 };
 
-// https://open.spotify.com/embed/playlist/2CvFcxANy3zBtMEZG1CzWP?theme=0
