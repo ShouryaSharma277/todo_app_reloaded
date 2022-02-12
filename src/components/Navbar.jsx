@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { Todo } from "./todos/Todo";
 import { Music } from "./music/Music";
 import { useState, useEffect } from 'react';
-import { Toggle } from "./ThemeToggle";
+import { Toggle } from "./darkMode/ThemeToggle";
 
 export const Navbar = () => {
     const [inputText, setInputText] = useState('');
