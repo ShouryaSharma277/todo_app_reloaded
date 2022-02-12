@@ -40,7 +40,7 @@ export const Navbar = () => {
                         <Link to="/news" className="mr-10 hover:text-white cursor-pointer">News</Link>
                         <Link to="/music" className="mr-10 hover:text-white cursor-pointer">Music</Link>
                         <Link to="/about" className="mr-10 hover:text-white cursor-pointer">About</Link>
-                        <Toggle />
+                        <div className="cursor-pointer"><Toggle/></div>
 
                     </nav>
 
