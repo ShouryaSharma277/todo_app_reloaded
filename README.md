@@ -17,3 +17,6 @@ This is a remake of my todo app
 
 > With yarn:
 `yarn start`
+
+# Working on
+1. Adding docker to make it easier to run
